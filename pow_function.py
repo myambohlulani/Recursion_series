@@ -1,7 +1,6 @@
 # number raised to the nth term
-# 0mniManTheCpu
+# Hlulani Myambo
 # 14 May 2025 - Wednesday
-# Recursion series 1 , week 1, #5
 
 def power_function(number: int | float, exponent: int) -> int | float:
     # base case

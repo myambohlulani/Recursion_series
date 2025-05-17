@@ -1,7 +1,6 @@
-# Fibonnacci with memoization
-# 0mniManTheCpu
+# Fibonacci with memoization
+# Hlulani Myambo
 # 13 May 2025 - Tuesday
-# Recursion series 1 , week 1, #4
 
 import sys
 sys.setrecursionlimit(30000)
@@ -9,7 +8,7 @@ sys.setrecursionlimit(30000)
 def fibonacci(number: int, memo: dict[int, int]) -> int:
     """
     This function uses memoization which is used to optimise code.
-    Here we store base cases on a dictionary and first check if they exists and return them if they exists else we calculate once and store them in dictionary.
+    Here we store base cases on a dictionary and first check if they exist and return them if they exist else we calculate once and store them in dictionary.
     Then next time you compute for something it takes lesser time.
     Args:
         number (int): fibonacci of that number

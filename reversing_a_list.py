@@ -1,7 +1,6 @@
 # Reversing a list within a list and reversing just a list
 # 0mniManTheCpu
 # 15 May 2025 - Thursday
-# Recursion series 1 , week 1, # 9
 
 def reversing_list(array: list[int | str | None]) -> list:
     # base case
@@ -18,7 +17,7 @@ print(reversing_list([])) #ouput = []
 print(reversing_list([""])) #ouput = ['']
 print(reversing_list(["Hello, World!", "Sucks does not it?"])) #output = ['Sucks does not it?', 'Hello, World!']
 
-def reversing_array_within_and_elements(array: list[list[int | str | list | None]]) -> list[list[int | str | list | None]]:
+def reversing_array_within_and_elements(array: list[list[int | str | list | None]]) -> list:
     # base case for empty array
     if not array:
         return []
@@ -39,4 +38,4 @@ def reversing_array_within_and_elements(array: list[list[int | str | list | None
     return reversing_array_within_and_elements(array[1:]) + [array[0]]
 
 print(reversing_array_within_and_elements([[], [1, 2, 3], [10, 'Hello World!', [10, 12, 13, [14, 19]]], "Long!"])) #output = ['Long!', [[[19, 14], 13, 12, 10], 'Hello World!', 10], [3, 2, 1], []]
-print(reversing_array_within_and_elements([[], [1, 2, 3]])) # ouput = [[3, 2, 1], []]
+print(reversing_array_within_and_elements([[], [1, 2, 3]])) # output = [[3, 2, 1], []]

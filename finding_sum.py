@@ -1,10 +1,9 @@
 # Looking for the sum of elements within an array recursively
-# 0mniManTheCpu
+# Hlulani Myambo
 # 14 May 2025 - Wednesday
-# Recursion series 1 , week 1, # 7
 
 def finding_sum(array: list[int]) -> int:
-    "This function calculates for the sum of elements within an array"
+    """This function calculates for the sum of elements within an array"""
     # base case in case the list is empty
     if not array:
         return 0
@@ -15,7 +14,7 @@ def finding_sum(array: list[int]) -> int:
     return array[0] + finding_sum(array[1:])
 
 print(finding_sum([1, 2, 3, 4, 5])) #output = 15
-print(finding_sum([-1, 10, 11, -32, 10, -245])) # ouput = -247
+print(finding_sum([-1, 10, 11, -32, 10, -245])) # output = -247
 
 def finding_sum_of_odd_index(array: list[int], index=1) -> int:
     """

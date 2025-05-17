@@ -1,7 +1,6 @@
 # binary search using recursion
-# 0mniManTheCpu 
+# Hlulani Myambo
 # 13 May 2025 - Tuesday
-# Recursion series 1 , week 1, #2
 
 def binary_search(array: list[int], target: int, left_pointer: int, right_pointer: int) -> int:
     """
@@ -21,16 +20,15 @@ def binary_search(array: list[int], target: int, left_pointer: int, right_pointe
     # base case 1, returns -1 when left pointer passes the right pointer
     if left_pointer > right_pointer:
         return -1
-    # if the middle value in the array is equivalent too target then i return index of it
+    # if the middle value in the array is equivalent to target then I return index of it
     if array[middle_pointer] == target:
         return middle_pointer
     # if the middle value if greater than target then move the right pointer into middle_pointer - 1 since the middle value has been checked already
     if array[middle_pointer] > target:
         # recursive call
         return binary_search(array, target, left_pointer, middle_pointer - 1)
-    # if the middle value is less than target then move the left pointer into middle_pointer + 1 since the middle avlue has been checked already.
-    if array[middle_pointer] < target:
-        return binary_search(array, target, middle_pointer + 1, right_pointer)
+    # if the middle value is less than target then move the left pointer into middle_pointer + 1 since the middle value has been checked already.
+    return binary_search(array, target, middle_pointer + 1, right_pointer)
 
 # test cases and their outputs
 test_case: list[int] = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]

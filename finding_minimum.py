@@ -1,7 +1,6 @@
 # Finding the minimum within the array using the for loop for the first function and recursion only for the second function
-# 0mniManTheCpu
+# Hlulani Myambo
 # 14 May 2025 - Wednesday
-# Recursion series 1 , week 1, # 6
 
 def find_minimum(array: list[int]) -> int:
     """
@@ -14,8 +13,8 @@ def find_minimum(array: list[int]) -> int:
     """
     # base case for when an array is empty
     if not array:
-        return 
-    # base case for when the number is the only on in the array
+        return 0
+    # base case for when the number is the only one in the array
     if len(array) == 1:
         return array[0]
     minimum: int = array[0]
@@ -31,10 +30,13 @@ print(test)
 
 def find_min(array: list[int]) -> int:
     if not array:
-        return 
+        return 0
     if len(array) == 1:
         return array[0]
-    return array[0] if array[0] < find_min(array[1:])  else find_min(array[1:])
+    if array[0] < find_min(array[1:]) :
+        return array[0]
+    else:
+        return find_min(array[1:])
 
 test_2 = [1, 10, -11, -22, 102, -2, 90, 13]
 print(find_min(test_2))#ouput = -22

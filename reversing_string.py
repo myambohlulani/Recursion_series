@@ -1,12 +1,11 @@
 # reversing a string recursively
 # 0mniManTheCpu
 # 15 May 2025 - Thursday
-# Recursion series 1 , week 1, # 8
 
 # no recursion
-def lazy_Way(string):
+def lazy_way(string: str) -> str:
     return string[::-1]
-print(lazy_Way("hello, World!")) #output = !dlroW ,olleh
+print(lazy_way("hello, World!")) #output = !dlroW ,olleh
 
 # with recursion
 def reversing_string(string: str) -> str:

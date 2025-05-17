@@ -1,7 +1,6 @@
 # This version uses loop for binary search
-# 0mniManTheCpu
+# Hlulani Myambo
 # 13 May 2025 - Tuesday
-# Recursion series 1 , week 1, #1
 
 def binary_search(array: list[int], target: int) -> int:
     """

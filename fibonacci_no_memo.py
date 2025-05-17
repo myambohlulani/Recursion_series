@@ -1,7 +1,6 @@
 # Fibonacci without memoization
-# 0mniManTheCpu
+# Hlulani Myambo
 # 13 May 2025 - Tuesday
-# Recursion series 1 , week 1, # 3
 
 def fibonacci(number: input) -> int:
     # base case 1
@@ -18,4 +17,4 @@ print(fibonacci(20)) #output 6765
 print(fibonacci(30)) #output 832040
 
 # this will take time depending on your processor
-print(fibonacci(50)) # ouput = 12586269025
+print(fibonacci(50)) # output = 12586269025
