@@ -2,6 +2,10 @@
 # 17 May 2025 - Saturday
 
 from typing import Self
+
+# test cases
+array_of_integers = [0, 18, 123, 2025, 19005, 123123]
+
 class CountDigits(object):
     # converting the number into string
     # using private method
@@ -21,15 +25,44 @@ class CountDigits(object):
     # find the total here
     def get_total(self: Self, string: int) -> int:
         return self.__count_numbers(self.__get_string(string))
+    
+    # printing recursively
+    def get_output(self, data: list[int], index=0) -> int:
+        if len(data) <= index:
+            return
+        print(self.get_total(data[index]))
+        return self.get_output(data, index + 1)
 
 # instance
 count_digits: CountDigits = CountDigits()
 
-# if the file is run directly , it must run but if it is imported the code will not be executed immediately
-if __name__ == '__main__':
-    print(count_digits.get_total(0)) #output = 1
-    print(count_digits.get_total(18)) #ouput = 2
-    print(count_digits.get_total(123)) #ouput = 3
-    print(count_digits.get_total(2025)) #output = 4
-    print(count_digits.get_total(19005)) #output = 5
-    print(count_digits.get_total(123123)) #output = 6
+# get results from above class
+print("Counting...")
+count_digits.get_output(array_of_integers)
+
+class FindProduct(object):
+    @staticmethod
+    def __change_to_string(number: int) -> str:
+        return str(number)
+    
+    def get_product(self: Self, number) -> int:
+        string = self.__change_to_string(number)
+        if not string:
+            return 0
+        if len(string) == 1:
+            return int(string[0])
+        return int(string[0]) * self.get_product(int(string[1:]))
+
+    # printing recursively
+    def get_output(self, data: list[int], index=0) -> int:
+        if len(data) <= index:
+            return
+        print(self.get_product(data[index]))
+        return self.get_output(data, index + 1)
+    
+# instance 
+find_product: FindProduct = FindProduct()
+
+# get output
+print("\nGetting the product.")
+find_product.get_output(array_of_integers)

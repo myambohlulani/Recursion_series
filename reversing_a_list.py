@@ -1,6 +1,7 @@
 # Reversing a list within a list and reversing just a list
 # 0mniManTheCpu
 # 15 May 2025 - Thursday
+# Recursion series 1 , week 1, # 9
 
 def reversing_list(array: list[int | str | None]) -> list:
     # base case
