@@ -15,7 +15,7 @@ def is_power_of_two(number: int) -> bool:
     Returns:
         bool: returns either True or False depending on the input.
     """
-    if number == 2 or number == 1 or number == 0:
+    if number == 2 or number == 0:
         return True
     if not number or number % 2 != 0:
         return False
