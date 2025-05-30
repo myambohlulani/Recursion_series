@@ -1,3 +1,3 @@
-# Recursion_series
+# Recursion Series
 
-coming soon!!
+coming soon
