@@ -1,3 +1,3 @@
 # Recursion Series
 
-coming soon
+using recursion to solve problems in python...
